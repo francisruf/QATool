@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franc\\Documents\\_MYDOCS\\PROJECTS_LIVE\\QATool\\BranchSolver\\BranchSolver.csproj": {}
+    "D:\\ProjetsPerso\\QATool\\BranchSolver\\BranchSolver.csproj": {}
   },
   "projects": {
-    "C:\\Users\\franc\\Documents\\_MYDOCS\\PROJECTS_LIVE\\QATool\\BranchSolver\\BranchSolver.csproj": {
+    "D:\\ProjetsPerso\\QATool\\BranchSolver\\BranchSolver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\Documents\\_MYDOCS\\PROJECTS_LIVE\\QATool\\BranchSolver\\BranchSolver.csproj",
+        "projectUniqueName": "D:\\ProjetsPerso\\QATool\\BranchSolver\\BranchSolver.csproj",
         "projectName": "BranchSolver",
-        "projectPath": "C:\\Users\\franc\\Documents\\_MYDOCS\\PROJECTS_LIVE\\QATool\\BranchSolver\\BranchSolver.csproj",
-        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\Documents\\_MYDOCS\\PROJECTS_LIVE\\QATool\\BranchSolver\\obj\\",
+        "projectPath": "D:\\ProjetsPerso\\QATool\\BranchSolver\\BranchSolver.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetsPerso\\QATool\\BranchSolver\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -10,7 +10,7 @@ namespace FileReadingApp
         static string currentDirectory;
         static string filePath;
         static string fileExtension;
-        static string[] keywords = { "[IF", "[ELSE", "[DEFAULT" };
+        static string[] keywords = { "[IF", "[ELSE", "[DEFAULT", "*["};
         static List<string> allLines;
         static List<string> filteredLines;
         static List<string> properties;
@@ -41,7 +41,6 @@ namespace FileReadingApp
             if (validFile)
             {
                 allLines = GetLines(filePath);
-                Console.WriteLine("All lines : " + allLines.Count());
                 filteredLines = FilterLines(allLines, keywords);
                 Console.WriteLine("All lines : " + allLines.Count());
                 Console.WriteLine("Filtered Lines : " + filteredLines.Count());
@@ -122,6 +121,8 @@ namespace FileReadingApp
                 if (substrings.Any(substring => line.Contains(substring)))
                 {
                     filteredLines.Add(line);
+                    Console.WriteLine(line);
+
                 }
             }
 
@@ -135,11 +136,12 @@ namespace FileReadingApp
             foreach (string line in filteredLines)
             {
                 string tested = "";
-                string firstLine = ""; 
+                string firstLine = "";
+                string conditionType = "";
                 string knot = GetKnot(line, out firstLine); // Replace with actual knot value
-                string condition = GetCondition(line); // Use the filtered line string as the condition property
+                string condition = GetCondition(line, out conditionType); // Use the filtered line string as the condition property
 
-                string properties = $"{tested},{knot},{firstLine},{condition}";
+                string properties = $"{tested};{knot};{firstLine};{conditionType};{condition}";
                 propertiesList.Add(properties);
             }
 
@@ -216,7 +218,18 @@ namespace FileReadingApp
 
                     if (uniqueLine.Contains("#LINEID"))
                     {
-                        firstLine += uniqueLine; // Store the line with #LINEID
+                        int lastIndex = uniqueLine.IndexOf("#LINEID") - 1;
+
+                        while (lastIndex > 0)
+                        {
+                            if (uniqueLine[lastIndex].Equals(' '))
+                                lastIndex--;
+                            else
+                                break;
+                        }
+
+                        string cleanLine = uniqueLine.Substring(0, lastIndex + 1);
+                        firstLine += cleanLine; // Store the line with #LINEID
                         //Console.WriteLine($"Line with #LINEID: {firstLine}");
                         break; // Exit the loop after finding the line
                     }
@@ -226,17 +239,29 @@ namespace FileReadingApp
             return knot;
         }
 
-        static string GetCondition(string line)
+        static string GetCondition(string line, out string conditionType)
         {
+            conditionType = "";
             int openBracketIndex = line.IndexOf("[");
             int closeBracketIndex = line.IndexOf("]");
 
             if (openBracketIndex != -1 && closeBracketIndex != -1 && closeBracketIndex > openBracketIndex)
             {
+                if (line.Contains("F_"))
+                    conditionType = "FACT";
+
+                else if (line.Contains("G_"))
+                    conditionType = "GROUPING";
+
+                else if (line.Contains("*["))
+                    conditionType = "CHOICE";
+
                 int startIndex = openBracketIndex + 1; // Start after "["
                 int endIndex = closeBracketIndex; // End before "]"
 
                 string extractedCondition = line.Substring(startIndex, endIndex - startIndex);
+
+
                 return extractedCondition;
             }
 
@@ -259,12 +284,12 @@ namespace FileReadingApp
             using (StreamWriter writer = new StreamWriter(outputPath))
             {
                 // Write the header row with property names
-                writer.WriteLine("Tested,Knot,First Line,Condition"); // Adjust property names as needed
+                writer.WriteLine("Tested,Knot,First Line,Type,Condition"); // Adjust property names as needed
 
                 foreach (string properties in propertiesList)
                 {
                     // If any property contains a comma or double quote, enclose them in double quotes
-                    string[] propertyValues = properties.Split(',');
+                    string[] propertyValues = properties.Split(';');
                     for (int i = 0; i < propertyValues.Length; i++)
                     {
                         if (propertyValues[i].Contains(",") || propertyValues[i].Contains("\""))

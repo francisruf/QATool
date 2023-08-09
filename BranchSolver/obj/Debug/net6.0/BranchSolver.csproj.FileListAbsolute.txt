@@ -1,0 +1,15 @@
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\bin\Debug\net6.0\BranchSolver.exe
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\bin\Debug\net6.0\BranchSolver.deps.json
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\bin\Debug\net6.0\BranchSolver.runtimeconfig.json
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\bin\Debug\net6.0\BranchSolver.dll
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\bin\Debug\net6.0\BranchSolver.pdb
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\BranchSolver.csproj.AssemblyReference.cache
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\BranchSolver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\BranchSolver.AssemblyInfoInputs.cache
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\BranchSolver.AssemblyInfo.cs
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\BranchSolver.csproj.CoreCompileInputs.cache
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\BranchSolver.dll
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\refint\BranchSolver.dll
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\BranchSolver.pdb
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\BranchSolver.genruntimeconfig.cache
+C:\Users\franc\Documents\_MYDOCS\PROJECTS_LIVE\QATool\BranchSolver\obj\Debug\net6.0\ref\BranchSolver.dll

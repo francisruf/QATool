@@ -1,0 +1,89 @@
+Tested,Knot,First Line,Condition
+,,JEANNE:     Now you know my story.        #LINEID: 00100,IF G_Jeanne_Conservatism = HIGH
+,,JEANNE:     Now you know my story.        #LINEID: 00100,ELSE
+,SorryLiar,JEANNE:     All I did was lie my way out of trouble and make things worse.        #LINEID: 00500,IF - G_Jeanne_Manipulative = HIGH
+,SorryStubborn,JEANNE:     I was stubborn, and short-sighted, and *stupid*, and...     #LINEID: 00500,ELSE / IF - G_Jeanne_Headstrong = HIGH
+,PeltNaive,NORMALMAIKAN:     I kept hoping this one fur would fix EVERYTHING the white men did.     #LINEID: 00300,IF - G_Maikan_Openness = HIGH
+,PeltSpirit,NORMALMAIKAN:     I used to think appeasing the spirit's anger was all that really mattered.     #LINEID: 00300,ELSE / IF - G_Maikan_Traditionalism = HIGH
+,BibleNeeded,JEANNE:     Honestly? It felt like I *had* to.      #LINEID: 00100,IF - F_Attack_BibleNo = TRUE
+,BibleWanted,JEANNE:     Just because reading it got me into trouble doesn't mean I wanted it gone.      #LINEID: 00100,ELSE / IF - F_Attack_BibleRead = TRUE
+,GodIsDead,JEANNE:     ...But it didn't matter. No matter how loud I cried, He never listened.     #LINEID: 00100,IF - G_Jeanne_FreeSpirited = HIGH
+,GodIsGone,JEANNE:     ...But I wish I could have heard Him answer. Just once.      #LINEID: 00100,ELSE / IF - G_Jeanne_Conservative = HIGH
+,IfStrong,JEANNE:     If I tried hard enough, I could *make* life better. For everyone.      #LINEID: 00400,IF - G_Jeanne_Headstrong = HIGH
+,IfCunning,JEANNE:     If I was smart about it, I'd *thrive* in ways I never could in Europe.     #LINEID: 00400,ELSE / IF - G_Jeanne_Manipulative = HIGH
+,FaithGone,JEANNE:     ...But I don't know if I have any of that old faith left.       #LINEID: 00600,IF - G_Jeanne_FreeSpirited = HIGH
+,FaithWrong,JEANNE:     ...Some say God has a plan for those who believe in Him.       #LINEID: 00600,ELSE / IF - G_Jeanne_Conservative = HIGH
+,CouldBeSaved_Open,NORMALMAIKAN:     I did what I could. But I couldn't help a man who wouldn't meet me halfway.      #LINEID: 00200,IF - G_Maikan_Openness = HIGH
+,CouldBeSaved_Trad,NORMALMAIKAN:     Tehonwastasta said men in black robes were beyond understanding. And he was right.       #LINEID: 00200,ELSE / IF - G_Maikan_Traditionalist = HIGH
+,HadToDie_Open,NORMALMAIKAN:     Even HE must have known things would turn out this way, after what he did.       #LINEID: 00200,IF - G_Maikan_Openness = HIGH
+,HadToDie_Trad,NORMALMAIKAN:     Part of me believes Tehonwastasta was right, when he said the man deserved death.       #LINEID: 00200,ELSE / IF - G_Maikan_Traditionalist = HIGH
+,Killed_Loyalty,JEANNE:     Yet even MORE people may have died because I disobeyed.      #LINEID: 00500,IF - F_Promise_FinalChoiceTehonLoyalty = TRUE
+,Killed_Obedience,JEANNE:     ...No. No, I was GOING to kill people because of him.       #LINEID: 00500,ELSE
+,Loyalty_TrustedJesuit,JEANNE:     He told me, over and over. THIS is what God wants. THIS is how we make the New World safe.       #LINEID: 00600,IF - F_House3_CheckingOnTheJesuit = TRUE
+,Loyalty_TrustedTehon,JEANNE:     I couldn't just sit there and let Tehon suffer, but...      #LINEID: 00600,ELSE
+,(Unknown)TrustedJesuit_Obedience,,IF - F_House3_CheckingOnTheJesuit = TRUE
+,(Unknown)TrustedTehon_Obedience,,ELSE
+,FaithCrisis_Con,JEANNE:     Out there? I stayed true to my principles, no matter what. Never wavered. Never asked *why.*      #LINEID: 01000,IF G_Jeanne_Conservatism = HIGH
+,FaithCrisis_Free,JEANNE:     His interpretation of God's will was warped beyond recognition. But mine was too.        #LINEID: 01000,ELSE / IF G_JeanneFreeSpirited = HIGH
+,FaithCrisis_Con_Head,JEANNE:     I was as unflinching as he was. And Capitaine... Capitaine DIED because of it.     #LINEID: 01100,IF G_Jeanne_Headstrong = HIGH
+,FaithCrisis_Con_Manip,JEANNE:     But I was only using God as an excuse, to make deceit seem virtuous. Just like Augustin.       #LINEID: 01100,ELSE / IF G_JeanneManipulative = HIGH
+,FaithCrisis_Free_Head,JEANNE:     And I was too obstinate to realize how far I strayed until it was too late.       #LINEID: 01100,IF G_Jeanne_Headstrong = HIGH
+,FaithCrisis_Free_Man,JEANNE:     I lied, sinned, rejected doctrine... Used God as a tool. And people DIED for it.      #LINEID: 01100,ELSE / IF G_JeanneManipulative = HIGH
+,InnuBroken,NORMALMAIKAN:     ...But I know how crushing it is, when you realize you've failed to live up to them.       #LINEID: 00200,IF - F_NoWay_PierreFateStopByForce = TRUE
+,InnuStrong,NORMALMAIKAN:     ...But I know how hard it can be to stay true to them, when they're put to the test.        #LINEID: 00200,ELSE
+,JesuitFuture,NORMALMAIKAN:     And I'm sure more outsiders will use that justification again, to do even worse.      #LINEID: 00200,IF - F_Promise_FinalChoiceTehonLoyalty = TRUE
+,JesuitJeanne,NORMALMAIKAN:     And I can't deny resenting you for doing the same. No matter your reasons, or regrets.        #LINEID: 00200,ELSE
+,BeliefFast,NORMALMAIKAN:     They make you... Quick to judge things. For better AND for worse.       #LINEID: 00400,IF - G_Maikan_Instinctive = HIGH
+,BeliefSlow,NORMALMAIKAN:     They can... Color your way of thinking. Limit your outlook.      #LINEID: 00400,ELSE / IF - G_Maikan_Contemplative = HIGH
+,ImpossibleTehon,NORMALMAIKAN:     It's the reason Tehonwastasta says he'd rather struggle doing something than suffer doing nothing.        #LINEID: 00700,IF - G_Maikan_Openness = HIGH
+,ImpossibleInnu,NORMALMAIKAN:     Because giving up on the Innu would be like... Giving up on everything that makes me who I am.     #LINEID: 00700,ELSE / IF - G_Maikan_Traditionalist = HIGH
+,BetterWorldRespect,NORMALMAIKAN:     You showed respect to a Wendat man, despite everything you were taught.     #LINEID: 00600,IF - F_Promise_FinalChoiceTehonLoyalty = TRUE
+,BetterWorldPurpose,NORMALMAIKAN:     You found purpose in trying to build lasting peace with people in need.      #LINEID: 00600,ELSE
+,MaikanCounters_Traditionalist,NORMALMAIKAN:     Because if we're consumed by BLIND devotion, and refuse to see truths right in front of us...     #LINEID: 01200,IF G_Maikan_Traditionalist = HIGH
+,MaikanCounters_Openness,NORMALMAIKAN:     Because if we try to bend reality to our wills, until it fits what we THINK is righteous...        #LINEID: 01200,ELSE / IF G_Maikan_Openness = HIGH
+,Dignity,    //Regardless of his crimes, he's a Jesuit, and...     #LINEID: 00200,IF G_Jeanne_FreeSpirited = HIGH
+,Purgatory,    //Nuns at the convent said sinners were to be cleansed of evil in purgatory.       #LINEID: 00200,ELSE / IF G_Jeanne_Conservative = HIGH
+,Dignity,    //Regardless of his crimes, he's a Jesuit, and...     #LINEID: 00200,IF G_Jeanne_FreeSpirited = HIGH
+,Purgatory,    //Nuns at the convent said sinners were to be cleansed of evil in purgatory.       #LINEID: 00200,ELSE / IF G_Jeanne_Conservative = HIGH
+,Complex_Instinct,NORMALMAIKAN:     I know the French aren't monsters. They have principles, and reasons for doing what they do.       #LINEID: 00300,IF G_Maikan_Instinctive = HIGH
+,Complex_Contemplative,NORMALMAIKAN:     I *tried* to learn more about your people. To make sense of your wants and actions.        #LINEID: 00300,ELSE / IF G_Maikan_Contemplative = HIGH
+,Exceptions,NORMALMAIKAN:     There are exceptions, obviously. Though they're few and far between.       #LINEID: 00600,IF F_NoWay_PierreFateConvince = TRUE
+,NoExceptions,NORMALMAIKAN:     ...Though maybe *I'm* the reason things feel that way.      #LINEID: 00600,ELSE
+,Exceptions,NORMALMAIKAN:     There are exceptions, obviously. Though they're few and far between.       #LINEID: 00600,IF F_NoWay_PierreFateConvince = TRUE
+,NoExceptions,NORMALMAIKAN:     ...Though maybe *I'm* the reason things feel that way.      #LINEID: 00600,ELSE
+,OutsidersCrisis_Traditionalism,NORMALMAIKAN:     I should be back home. Preparing for winter Caribou hunts. Living like an Innu *should* live.       #LINEID: 00900,IF G_Maikan_Traditionalism = HIGH
+,OutsidersCrisis_Openness,NORMALMAIKAN:     I know there's nothing I can do about it. That I should be focusing on the future, not the past.     #LINEID: 00900,ELSE / IF G_Maikan_Openness = HIGH
+,OutsidersCrisis_TehonGOOD,JEANNE:     I know it might seem hard to believe, after everything that happened...     #LINEID: 00100,IF F_Promise_FinalChoiceTehonLoyalty = TRUE
+,OutsidersCrisis_TehonBAD,JEANNE:     Maybe I have no right to say this after what I've done to them...       #LINEID: 00100,ELSE
+,OutsidersCrisis_Tehon_PierreRules,NORMALMAIKAN:     Plus, even with people like Pierre on our side...      #LINEID: 00900,IF F_NoWay_PierreFateConvince = TRUE
+,OutsidersCrisis_Tehon_PierreDrools,NORMALMAIKAN:     Plus, with people like Pierre and Augustin around...      #LINEID: 00900,ELSE
+,OutsidersCrisis_PierreGOOD,JEANNE:     No matter his mistakes, no matter his actions, you kept believing Pierre could be better.         #LINEID: 00100,IF F_NoWay_PierreFateConvince = TRUE
+,OutsidersCrisis_PierreYIKES,JEANNE:     Regardless of your differences, or how things ended between you...      #LINEID: 00100,ELSE
+,Pierre_MADEPEACE,NORMALMAIKAN:     Because Pierre is just one person. And an exceptional one at that.      #LINEID: 00500,IF - F_NoWay_PierreFateConvince = TRUE
+,Pierre_ATTACKED,NORMALMAIKAN:     Because Pierre is proof they can change *us* too. And not always for the better.       #LINEID: 00500,ELSE / IF - F_NoWay_PierreFateStopByForce = TURE
+,Pierre_ABANDON,NORMALMAIKAN:     Because I can't fix a person who doesn't WANT to change.       #LINEID: 00500,ELSE
+,Pierre_ABANDON_Good,NORMALMAIKAN:     ...I don't hate Pierre. I don't even think he's a *bad* person. If anything, I owe him a lot.       #LINEID: 00600,IF - G_Maikan_PierreTrust = HIGH
+,Pierre_ABANDON_Bad,NORMALMAIKAN:     And for all I know? There's a chance NOTHING I did ever really got through to him.     #LINEID: 00600,ELSE
+,Assumptions_Tradition,NORMALMAIKAN:     ...And I could keep pretending things will stay the same.    #LINEID: 01300,IF - G_Maikan_Traditionalist = HIGH
+,Assumptions_Open,NORMALMAIKAN:     ...And I could keep believing good intentions are enough.     #LINEID: 01300,ELSE / IF - G_Maikan_Openness = HIGH
+,,JEANNE:     Now you know my story.        #LINEID: 00100,IF - F_Gifts_MaikanCounter_ImpossibleSituations = TRUE
+,DoNothingTehon,JEANNE:     You said you were like Tehon. That you'd rather struggle doing this than suffer doing nothing.     #LINEID: 00100,IF - G_Maikan_Openness = HIGH
+,DoNothingInnu,JEANNE:     You said doing nothing to help the Innu would like be betraying them. Betraying who you are.     #LINEID: 00100,ELSE - IF G_Maikan_Traditionalist = HIGH
+,DoNothingBetterWorld,JEANNE:     You said your people's values, and your love for this land... They're IMPOSSIBLE to cast aside.     #LINEID: 00100,ELSE / IF - F_Gifts_MaikanCounter_BetterWorld = TRUE
+,(Unknown)FaithCrisis_Conservatism,,IF G_Jeanne_Conservatism = HIGH
+,(Unknown)FaithCrisis_FreeSpirited,,ELSE / IF G_JeanneFreeSpirited = HIGH
+,Denouement_Headstrong,JEANNE:     Your people didn't make it this far by giving up. And neither did we.     #LINEID: 00600,IF G_Jeanne_Headstrong = HIGH
+,Denouement_Manipulative,JEANNE:     Be cunning. Be resourceful. And be the person your people NEED you to be.       #LINEID: 00600,ELSE / IF G_Jeanne_Manipulative = HIGH
+,Deal_Money,JEANNE:     I'm not exactly sure how I'll keep *my* promise and pay him properly, but...        #LINEID: 00300,IF F_Stranger3_BribePierre = TRUE
+,Deal_Blackmail,NORMALMAIKAN:     Surprised he didn't call that bluff you made to blackmail him.      #LINEID: 00300,ELSE / IF F_Stranger3_BlackmailPierre = TRUE
+,Deal_Convince,,ELSE
+,Blackmail_Manipulative,JEANNE:     It pays to be a good liar sometimes.     #LINEID: 00400,IF G_Jeanne_Manipulative = HIGH
+,Blackmail_Default,JEANNE:     Well... He might, eventually. But I'll deal with that *if* it happens.      #LINEID: 00400,ELSE
+,(Unknown)ConvinceGood,,IF G_Jeanne_PierreAmicable = HIGH
+,(Unknown)ConvinceBad,,ELSE / IF G_Jeanne_PierreAmicable = LOW
+,Exchange_NewWay,NORMALMAIKAN:     ...I know there'll be *something* I can do out there. And I'll find it.        #LINEID: 01000,IF - G_Maikan_Openness = HIGH
+,Exchange_OldWay,NORMALMAIKAN:     ...I won't let that stop me from keeping the Innu safe. Not *ever* again.      #LINEID: 01000,ELSE / IF - G_Maikan_Traditionalist = TRUE
+,Gratitude_Impossible,JEANNE:     I know you'll use it to set things right, no matter what comes your way next.        #LINEID: 01300,IF - F_Gifts_MaikanCounter_ImpossibleSituations = TRUE
+,Gratitude_BetterWorld,JEANNE:     You can... Consider it thanks. For reminding me not to give up on myself.       #LINEID: 01300,ELSE / IF - F_Gifts_MaikanCounter_BetterWorld = TRUE
+,Vow_Resilient,NORMALMAIKAN:     So... Promise me you won't give up out there either, alright?        #LINEID: 02100,IF - F_Gifts_JeanneCounter_Persist = TRUE
+,Vow_Adaptive,NORMALMAIKAN:     So... Promise me you won't be afraid of change either, alright?        #LINEID: 02100,ELSE
